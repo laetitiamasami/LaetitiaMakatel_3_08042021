@@ -31,6 +31,10 @@ body {
   text-align: center;
 }
 
+.header_icon {
+  display: inline-block;
+}
+
 .location {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,8 +250,8 @@ body {
 
 .presentation_menu_underline {
   margin-top: -10px;
-  margin-left: 20px;
-  width: 40px;
+  margin-left: 10px;
+  width: 45px;
   height: 3px;
   background-color: #99e2d0;
 }
@@ -301,7 +305,10 @@ body {
           box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   text-decoration: none;
-  margin: 20px;
+  margin-top: 40px;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 70px;
 }
 
 .restaurants {
