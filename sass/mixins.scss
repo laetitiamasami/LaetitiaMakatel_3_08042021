@@ -5,3 +5,16 @@
     height: 3px;
     background-color: #99e2d0;
 }
+
+@mixin menu_card-check {
+    display: flex;
+    background-color: #99e2d0;
+    color: white;
+    position: absolute;
+    top: 0;
+    padding: 0 20px;
+    right: 0px;
+    height: 100%;
+    align-items: center;
+    transition: 1s;
+}
