@@ -12,6 +12,7 @@ body{
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 .loader{
@@ -301,6 +302,35 @@ body{
         display: flex;
         justify-content: space-between;
         overflow: hidden;
+    }
+
+    &_menu_card:nth-child(1){
+        animation: smooth-slideup linear 2s backwards;
+    }
+
+    &_menu_card:nth-child(2){
+        animation: smooth-slideup linear 2s  0.3s backwards;
+    }
+
+    &_menu_card:nth-child(3){
+        animation: smooth-slideup linear 2s  0.6s backwards;
+    }
+
+    &_menu_card:nth-child(4){
+        animation: smooth-slideup linear 2s  0.9s backwards;
+    }
+
+    &_menu_card:hover{
+        padding-right: 100px;
+        transition: 1s;
+    }
+
+    &_menu_card_check_icon {
+        @include menu_card-check;
+        transform: rotate(360deg);
+        transition: transform 1s;
+            
+        
     }
 
     &_btn{
