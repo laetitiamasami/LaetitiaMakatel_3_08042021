@@ -327,27 +327,50 @@ body{
 
     &_menu_card_check_icon {
         @include menu_card-check;
+    }
+    
+    &_menu_card_check_icon{
         transform: rotate(360deg);
-        transition: transform 1s;
-            
-        
+        transition: 1s;
+    }
+    
+    &_menu_card:hover &_menu_card_check_icon{
+        right: 0;
+        transition: right 1s;
+    }
+    
+
+    &_menu_card:hover &_menu_card_p,
+    &_menu_card_h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     }
 
-    &_btn{
+    &_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 30px;
-        background: linear-gradient(350deg, #9356dc, #ff79da);
-        
-        color: white;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
         text-decoration: none;
+        background: linear-gradient(350deg, #9356dc, #ff79da);
+        color: white;
+        box-shadow: 0 0 10px #0000002e;
+        padding: 10px;
         margin-top: 40px;
-        margin-left: 70px;
-        margin-right: 70px;
-        margin-bottom: 70px;
+        border: transparent;
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 40px;
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 400ms;
     }
+
+    &_btn:hover {
+        transform: scale(1.10);
+        cursor: pointer;
+    } 
 }
 
 .restaurants{
@@ -477,4 +500,8 @@ body{
         padding-left: 20px;
         padding-bottom: 15px;
     }
+}
+
+@media screen and(min-width: 1400px) {
+    
 }
