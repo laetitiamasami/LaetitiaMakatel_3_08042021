@@ -543,36 +543,71 @@ body {
   color: white;
   position: absolute;
   top: 0;
-  padding: 0 20px;
-  right: 0px;
+  padding: 0 25px;
+  right: -150px;
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+.presentation_menu_card_check_icon {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.presentation_menu_card:hover .presentation_menu_card_check_icon {
+  right: 0;
+  -webkit-transition: right 1s;
+  transition: right 1s;
+}
+
+.presentation_menu_card:hover .presentation_menu_card_p, .presentation_menu_card_h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .presentation_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 30px;
+  text-decoration: none;
   background: linear-gradient(350deg, #9356dc, #ff79da);
   color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  text-decoration: none;
+  -webkit-box-shadow: 0 0 10px #0000002e;
+          box-shadow: 0 0 10px #0000002e;
+  padding: 10px;
   margin-top: 40px;
-  margin-left: 70px;
-  margin-right: 70px;
-  margin-bottom: 70px;
+  border: transparent;
+  font-size: 15px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.presentation_btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
 }
 
 .restaurants {
