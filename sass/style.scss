@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import "./keyframes";
+@import "./mixins";
+@import "./variables";
+
+a{
+    text-decoration: none;
+   
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    background: #f6f6f6;
+    animation-fill-mode: both;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    animation: loader-end 1s 3s forwards;
+
+    &_logo{
+        font-family: Shrikhand;
+        margin: 0px;
+    }
+    &_bouncer_ball{
+        display: flex;
+        flex-direction: row;
+        width: 30px;
+        height: 30px;
+        background-color: #ff79da;
+        margin: 17px;
+        border-radius: 50%;
+        animation: bouncer 0.5s cubic-bezier(.19,.57,.3,.98) infinite alternate;
+    }
+
+    &_bouncer_ball:nth-child(2) {
+        animation-delay: 0.1s;
+        background-color: #9356DC;
+    }
+
+    &_bouncer_ball:nth-child(3) {
+        animation-delay: 0.2s;
+        background-color: #99E2D0;
+    }
+}
+.loader_bouncer{
+    display: flex;
+}
+
+.heart-icon {
+
+    width: 25px;
+    height: 25px;
+    overflow: visible;
+    fill: url(#Gradient1);
+    fill-opacity: 0;
+    stroke: black;
+    stroke-width: 20px;
+    cursor: pointer;
+    transition: all 1s;
+    
+    &:hover {
+      overflow: visible;
+      fill-opacity: 1;
+      fill: url(#Gradient1);
+      stroke-opacity: 0;
+      animation: pulse-heart 1s;
+      transition: stroke-opacity 3s, fill-opacity 1s;
+    }
+}
+
+
+
+.header{
+    display: flex;
+    align-items: center;
+
+    h1{
+    text-align: center;
+    width: 90%;
+    margin-right: 10%;
+   
+    }
+    &_mainpage{
+        width: 10%;
+        text-align: center;
+    }
+
+    &_logo{
+        height: 34px;
+        width: 196px;
+        margin-right: 0px;
+        margin-top: 20px;
+
+    }
+
+    &_icon{
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        color: black;
+    }
+}
+
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    box-shadow: inset 0px 5px 10px  -10px #00000080;
+    &_icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &_icon_i{
+        padding-right: 20px;
+    }
+    h3{
+        padding-right: 20px;
+        font-weight: normal;
+        cursor: pointer;
+    }
+}
+
+.reservation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    
+    h2{
+        text-align: center;
+        font-weight: 900;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    p{
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 30px ;
+    }
+ 
+    &_btn {
+        color: white;
+        border-radius: 30px;
+        background: linear-gradient(350deg, #9356dc, #ff79da);
+        box-shadow: 0 0 16px #0000002e;
+        padding: 15px;
+        margin: 0px;
+        border: transparent;
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 40px;
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 400ms;
+    }
+
+    &_btn:hover {
+        transform: scale(1.10);
+        cursor: pointer;
+    } 
+}
+
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    &_card{
+        display: flex;
+        background-color: $primary;
+        border-radius: 25px;
+        max-width: 90%;
+        margin-bottom: 30px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+        margin-left: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+        padding: 10px ;
+        font-weight: 600;
+    }
+
+    &_card:hover{
+        background-color: #f5edff;
+        transition: color 0.3s;
+    }
+
+    &_card:hover &_card_icon{
+        color: #9356dc
+       
+    }
+
+    &_h2{
+        padding-left: 20px;
+    }
+
+    &_card_icon{
+        color: grey;
+        padding-left: 10px;
+        padding-right: 25px;
+        padding-top: 17px;
+    }
+
+    &_card_number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 100%;
+        background-color: #9356dc;
+        color: white;
+        height: 25px;
+        width: 25px;
+        left: -20px;
+        margin-top: 15px;
+        min-width: 15px;
+        min-height: 15px;
+    }
+}
+
+.presentation{
+    background-color: #f6f6f6;
+
+    &_images{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    &_menu_header{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        max-width: 1440px;
+        align-items: center;
+        justify-content: space-between;
+        margin: -50px;
+        margin-left: 0px;
+        background-color: #f6f6f6;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+
+        &_h2{
+            padding-left: 20px;
+            font-family: Shrikhand;
+            font-weight: normal;
+        }
+    }
+   
+    &_menu_h3{
+        padding-top: 20px;
+    }
+
+    &_menu_icon{
+        width: 60px;
+        height: 30px;
+        font-size: 25px;
+    }
+
+    &_menu_h3{
+        padding-left: 20px;
+        font-weight: normal;
+    }
+    &_menu_underline{
+        @include underline;
+        
+    }
+
+    &_menu_card{
+        margin: 20px;
+        position: relative;
+        background-color: white;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        overflow-x: hidden;
+        transition: all 1s;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &_menu_card_h3{
+        margin: 0px;
+    }
+
+    &_menu_card_p{
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    &_menu_card_price{
+        margin: 0px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    &_menu_card_small_description{
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    &_menu_card:nth-child(1){
+        animation: smooth-slideup linear 2s backwards;
+    }
+
+    &_menu_card:nth-child(2){
+        animation: smooth-slideup linear 2s  0.3s backwards;
+    }
+
+    &_menu_card:nth-child(3){
+        animation: smooth-slideup linear 2s  0.6s backwards;
+    }
+
+    &_menu_card:nth-child(4){
+        animation: smooth-slideup linear 2s  0.9s backwards;
+    }
+
+    &_menu_card:hover{
+        padding-right: 100px;
+        transition: 1s;
+    }
+
+    &_menu_card_check_icon {
+        @include menu_card-check;
+    }
+
+    &_menu_card:hover &_menu_card_check_icon{
+        right: 0;
+        transition: right 1s;
+       .fa-check-circle{
+           font-size: 20px;
+           transform: rotate(-360deg);
+           transition: transform 2s;
+       }
+    }
+
+    &_menu_card:hover &_menu_card_p,
+    &_menu_card_h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+    &_btn {
+        
+        display: flex;
+        justify-content: center;
+        border-radius: 30px;
+        background: linear-gradient(350deg, #9356dc, #ff79da);
+        box-shadow: 0 0 16px #0000002e;
+        padding: 15px;
+        border: transparent;
+        font-weight: normal;
+        margin-top: 40px;
+        margin-left: 90px;
+        margin-right: 90px;
+        margin-bottom: 40px;
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 400ms;
+    }
+
+    &_btn_order{
+        color: white;
+    }
+    &_btn:hover {
+        transform: scale(1.10);
+        cursor: pointer;
+    } 
+}
+
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    
+    &_h2{
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    &_card{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    &_card_container{
+        cursor: pointer;
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 10px 10px 10px 20px rgba(49, 49, 49, 0.05);
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    &_description{
+        text-decoration: none;
+    }
+
+    &_card_container:hover{
+        transform: scale(1.02);
+        transition: transform 0.2s;
+    }
+
+    &_card_new {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        height: 20px;
+        top: 15px;
+        right: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 3px;
+        background-color: #99e2d0;
+        color: #1b6150;
+        padding: 5px 8px 5px 8px;
+        text-decoration: none;
+      }
+
+    &_card_image_container{
+        height: 70%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &_card_description{
+        height: 30%;
+        padding-left: 20px;
+    }
+
+    &_container_images{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &_card_h3{
+        margin: 0px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        text-decoration: none;
+        color: black;
+    }
+
+    &_card_p{
+        margin: 0px;
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    &_card_icon{
+        position: absolute;
+        right: 25px;
+        bottom: 30px;
+        font-size: 25px;
+        text-decoration: none;
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+   
+    
+    &_logo{
+        padding-left: 20px;
+        padding-bottom: 15px;
+        padding-top: 20px;
+        height: 25px;
+        filter: invert(1);
+    }
+
+    &_icon{
+        padding-right: 20px;
+        width: 10px;
+        height: 10px;
+    }
+    
+    &_links{
+        color: white;
+        text-decoration: none;
+        padding-bottom: 5px;
+    }
+
+    &_links:hover{
+        font-weight: bold;
+    }
+
+    &_links_container{
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and(min-width: 1920px) {
+    body{
+        max-width: 1920px;
+        background-color: #f6f6f6;
+    }
+    
+    .location{
+        margin: 0px;
+    }
+
+    .reservation{
+        &_btn{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    .fonctionnement{
+        display: flex;
+        flex-direction: row;
+        padding-top: 50px;
+        &_h2{
+            margin-right: 50px;
+        }
+        &_card{
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+    }
+
+    .restaurants {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
+        padding-bottom: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+    .restaurants_h2 {
+        grid-column: 1/-1;
+        padding-bottom: 20px;
+      }
+
+    .footer{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+      }
+      
+    .presentation_menu_header{
+        display: flex;
+        position: absolute;
+        justify-content: center; 
+        width: 100%;
+        max-width: 1920px;
+      }
+    .heart-icon{
+        position: absolute;
+        right: 25px;
+        bottom: 15px;
+    }
+    .presentation_menu_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .presentation_btn{
+        margin-left: 800px;
+        margin-right: 800px;
+    }
+}
