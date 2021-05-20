@@ -516,6 +516,80 @@ body{
     }
 }
 
+@media screen and(min-width: 1280px) {
+       
+    body{
+        max-width: 1280px;
+        background-color: #f6f6f6;
+    }
+
+    .location{
+        margin: 0px;
+    }
+
+    .reservation{
+        &_btn{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    .fonctionnement{
+        display: flex;
+        flex-direction: row;
+        padding-top: 50px;
+        &_h2{
+            margin-right: 50px;
+        }
+        &_card{
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+    }
+
+    .restaurants {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
+        padding-bottom: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+    .restaurants_h2 {
+        grid-column: 1/-1;
+        padding-bottom: 20px;
+      }
+
+    .footer{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+      }
+      
+    .presentation_menu_header{
+        display: flex;
+        position: absolute;
+        justify-content: center; 
+        width: 100%;
+        max-width: 1920px;
+      }
+    .heart-icon{
+        position: absolute;
+        right: 25px;
+        bottom: 15px;
+    }
+    .presentation_menu_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .presentation_btn{
+        margin-left: 800px;
+        margin-right: 800px;
+    } 
+}
+
 @media screen and(min-width: 1500px) {
     
     body{
