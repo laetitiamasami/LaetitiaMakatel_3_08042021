@@ -629,6 +629,10 @@ body {
   cursor: pointer;
 }
 
+.presentation_btn {
+  background-color: #f6f6f6;
+}
+
 .restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -869,6 +873,8 @@ body {
   .presentation_btn {
     margin-left: 800px;
     margin-right: 800px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 
@@ -956,6 +962,8 @@ body {
   .presentation_btn {
     margin-left: 800px;
     margin-right: 800px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 
@@ -1043,6 +1051,8 @@ body {
   .presentation_btn {
     margin-left: 800px;
     margin-right: 800px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 
@@ -1130,6 +1140,8 @@ body {
   .presentation_btn {
     margin-left: 800px;
     margin-right: 800px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 /*# sourceMappingURL=style.css.map */
